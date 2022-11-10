@@ -18,4 +18,4 @@ Handling categroy data: - OrdinalEncoder
 
 data scaling :- standardscaler
 
-Machine Learning : -  multi-LinearRegression
+Machine Learning : -  LinearRegression
