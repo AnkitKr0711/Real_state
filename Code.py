@@ -144,9 +144,20 @@ x_train[['OverallQual', 'YearBuilt', 'YearRemodAdd','GrLivArea']]=pd.DataFrame(s
 y_train=train['SalePrice']
 print(x_train.shape,y_train.shape) # checking the shape of x,y variable set
 
-# Feature modeling
-from sklearn.linear_model import LinearRegression
-LR = LinearRegression()
+# Modeling traing in Lin_reg manually made
+class Lin_reg:
+    def __init__(self):
+        self.coef=None
+        self.intercept=None
+    def fit(self,x_train,y_train):
+        x_train=np.insert(x_train,0,1,axis=1) 
+        val=np.linalg.inv(np.dot(x_train.T,x_train)).dot(np.dot(x_train.T,y_train)) 
+        self.coef=val[1:] 
+        self.intercept=val[0]
+    def predict(self,x_test):
+        y_pred = np.dot(x_test,self.coef) + self.intercept
+        return (y_pred)
+LR = Lin_reg()
 LR.fit(x_train,y_train) 
 
 # Prediction on the test dataset
