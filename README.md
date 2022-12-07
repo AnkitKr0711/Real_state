@@ -9,15 +9,3 @@ I would like to know your opinion on how I can improve my future works. Enjoy re
 Data source :- https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
 Coding platform :- Python 3.9.7
-
-Python Library exersice :- numpy, pandas, seaborn, matplotlib, spicy
-
-Data Exploraty Analysis : - pandas_profiling
-
-Handling Missing data : - Impute.KNNImputer
-
-Handling categroy data: - OrdinalEncoder
-
-data scaling :- standardscaler
-
-Machine Learning : -  self made regression model
